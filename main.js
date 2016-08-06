@@ -31,9 +31,16 @@ $(document).ready(function (){
 				var logo = data1.logo != null ? data1.logo : "https://dummyimage.com/50x50/ecf0e7/5c5457.jpg&text=0x3F",
 				name = data1.display_name != null ? data1.display_name : channel;
 
-				$("#logoe").append('<div class="row"><img class="loogoo col-md-2" src="' + logo + '"><a class="col-md-5 haha" + href="'+data1.url+'">'+name+'</a><span class=" popo col-md-5">'+ game +'</span></div><hr>');
+				$("#logoe").append('<div class="row filterTheDivs"><img class="loogoo col-md-2" src="' + logo + '"><a class="col-md-5 haha" + href="'+data1.url+'">'+name.toLowerCase()+'</a><span class=" popo col-md-5">'+ game +'</span></div>');
 			});
 		});	
-	});					
+	});	
+	
+	$("#search").on("keyup", function(){
+		var theValueOf = $.trim(this.value.toLowerCase());
+		$(".filterTheDivs").hide();
+		$("div:contains("+ theValueOf +")").show();
+	});
+	
 });		
 
