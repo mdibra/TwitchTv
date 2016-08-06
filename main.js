@@ -13,7 +13,7 @@ $(document).ready(function (){
 				game =' Right now: (Asleep)';
 				status = 'offline';
 
-			} else if (data.stream === null){
+			} else if (data.stream === undefined){
 				
 					game = "Account Closed";
 				
