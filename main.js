@@ -52,5 +52,16 @@ $(document).ready(function (){
 		}
 	});
 	
+// 	$("#search").focus(function () {
+	
+// 		this.placeholder = (this.placeholder === "Search channel") ? "" : '' ;
+// 	});
+
+// 	$("#search").blur(function () {
+	
+// 		this.placeholder = (this.placeholder === "") ? "Search channel" :  "Search channel";
+	
+// });
+	
 });		
 
