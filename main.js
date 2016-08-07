@@ -41,6 +41,16 @@ $(document).ready(function (){
 		$(".filterTheDivs").hide();
 		$("div:contains("+ theValueOf +")").show();
 	});
+	$("#search").focus(function () {
+		if (this.placeholder === "Search channel") {
+			this.placeholder = "";
+		} 
+	});
+	$("#search").blur(function (){
+		if (this.placeholder === "") {
+			this.placeholder = "Search channel";
+		}
+	});
 	
 });		
 
